@@ -1,0 +1,125 @@
+
+body
+{
+    --primary:#225fa6;
+    --on-primary:#ffffff;
+    --primary-container:#d5e3ff;
+    --on-primary-container:#001c3b;
+    --secondary:#555f71;
+    --on-secondary:#ffffff;
+    --secondary-container:#d9e3f8;
+    --on-secondary-container:#121c2b;
+    --tertiary:#6e5676;
+    --on-tertiary:#ffffff;
+    --tertiary-container:#f8d8fe;
+    --on-tertiary-container:#27132f;
+    --error:#ba1a1a;
+    --on-error:#ffffff;
+    --error-container:#ffdad6;
+    --on-error-container:#410002;
+    --background:#fdfbff;
+    --on-background:#1a1c1e;
+    --surface:#faf9fd;
+    --on-surface:#1a1c1e;
+    --surface-variant:#e0e2ec;
+    --on-surface-variant:#43474e;
+    --outline:#74777f;
+    --outline-variant:#c4c6cf;
+    --shadow:#000000;
+    --scrim:#000000;
+    --inverse-surface:#2f3033;
+    --inverse-on-surface:#f1f0f4;
+    --inverse-primary:#a7c8ff;
+    --surface-dim:#dad9dd;
+    --surface-bright:#faf9fd;
+    --surface-container-lowest:#ffffff;
+    --surface-container-low:#f4f3f7;
+    --surface-container:#eeedf1;
+    --surface-container-high:#e9e7eb;
+    --surface-container-highest:#e3e2e6;
+
+    background: transparent !important;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.tooltip
+{
+    z-index: 10010 !important;
+}
+
+body > div
+{
+    pointer-events: auto;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+.flex-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+.flex-fixed {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.flex-can-grow {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+.flex-can-shrink {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.flex-dynamic {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.half-height, .half {
+    height: 50%;
+    max-height: 50%;
+}
+.half-width, .half {
+    width: 50%;
+    max-width: 50%;
+}
+
+.full-height, .full {
+    height: 100%;
+    max-height: 100%;
+}
+.full-width, .full {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media only screen and (max-height: 12rem) {
+    .mh:not(.sh),
+    .lh:not(.sh),
+    .mh.lh:not(.sh) {
+        display: none;
+    }
+}
+
+@media only screen and (min-height: 12rem) and (max-height: 24rem) {
+    .sh:not(.mh),
+    .lh:not(.mh),
+    .sh.lh:not(.mh) {
+        display: none;
+    }
+}
+
+@media only screen and (min-height: 24rem) {
+    .mh:not(.lh),
+    .sh:not(.lh),
+    .mh.sh:not(.lh) {
+        display: none;
+    }
+}
